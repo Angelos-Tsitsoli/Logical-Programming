@@ -130,3 +130,7 @@ Solution = [[5, 4, 3, 1, 2],
             [3, 5, 1, 2, 4],
             [4, 3, 2, 5, 1],
             [1, 2, 4, 3, 5]].
+
+
+# Prolog 
+This folder has some algorithms for sorting.
