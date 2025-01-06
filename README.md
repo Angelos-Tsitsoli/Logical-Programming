@@ -93,3 +93,40 @@ M = 6.
 
 
 ## Exercise #3
+The Skyscraper puzzle is a grid-based logic game where:
+
+* Each cell in an 𝑁×𝑁 grid contains a skyscraper of height 1 to 𝑁.
+* Skyscrapers in a row or column must have unique heights.
+* Numbers outside the grid indicate how many skyscrapers are visible from that direction. Taller buildings block shorter ones behind them.
+* Some cells may be pre-filled as clues.
+
+For example:
+The puzzle is represented with the predicate puzzle/7:
+
+* 1st Argument: Puzzle ID.
+* 2nd Argument: Grid size N.
+* 3rd/4th Arguments: Visible skyscrapers from the left/right of each row.
+* 5th/6th Arguments: Visible skyscrapers from the top/bottom of each column.
+* 7th Argument: Grid template with pre-filled values or underscores for unknowns.
+
+puzzle(demo, 5,
+ [0,2,0,2,4], [4,0,2,0,0],
+ [0,0,0,0,0], [0,3,0,2,0],
+ [[_,_,_,_,_],
+  [_,_,_,_,_],
+  [_,5,_,_,_],
+  [_,_,_,_,_],
+  [_,_,_,_,_]]).
+
+
+Task:Define the predicate skyscr/2:
+
+* Input: Puzzle ID.
+* Output: Completed grid (solution).
+
+?- skyscr(demo, Solution).
+Solution = [[5, 4, 3, 1, 2],
+            [2, 1, 5, 4, 3],
+            [3, 5, 1, 2, 4],
+            [4, 3, 2, 5, 1],
+            [1, 2, 4, 3, 5]].
